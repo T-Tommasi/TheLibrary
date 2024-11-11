@@ -1,5 +1,5 @@
 * {
-    border: red 0.5px solid;
+    border: red 0px solid;
     box-sizing: border-box;
 }
 html, body {
@@ -63,14 +63,74 @@ header {
     width: 90%;
     margin: auto;
     height: 93.5%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 
 .cardsContainer {
-    grid-template: repeat(3, 1fr)/repeat(3, 1fr);
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
     grid-column: 1 / 3;
     grid-row: 1/ 4;
     padding: 8px;
+    gap: 8x;
+}
+
+.card {
+    border-top: 12px #e9c46a solid;
+    border-radius: 15px 15px 0 0;
+    grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 15px;
+    position: relative;
+}
+
+.card::before {
+    background-image: url(img/funky-lines.webp);
+    opacity: 0.3;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    content: "";
+}
+
+.card>* {
+    height: 90%;
+    position: relative;
+}
+
+.card>h2 {
+    grid-column: 1 / 3;
+}
+
+.card>h4.author {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.card>h4.genre {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.card>p {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+}
+
+.card>.status {
+    grid-column: 1 / 3;
+    grid-row: 4 / 5;
+    background-color: #e9c46a;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 50%;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .insertionMenu {
