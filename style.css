@@ -1,0 +1,79 @@
+* {
+    border: red 0.5px solid;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+
+body {
+    background-image: url(img/y-so-serious-white.png);
+}
+
+.grid {
+    display: grid;
+}
+
+.flex {
+    display: flex;
+}
+
+header {
+    margin: 0;
+    grid-template: 1fr / 1fr 2fr 1fr;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    background-color: #264653;
+    border-radius: 0 0 15px 15px;
+}
+
+.leftMenu {
+    grid-column: 1 / 2;
+}
+
+.logo {
+    grid-column: 2 / 3
+}
+
+.rightMenu {
+    grid-column: 3 / 4;
+}
+
+.leftMenu, .rightMenu {
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 10px;
+}
+
+.leftMenu>li>a,.rightMenu>li>a {
+    text-decoration: none;
+    color: white;
+}
+
+.logo {
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.container {
+    grid-template: repeat(3, 1fr)/ repeat(3, 1fr);
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    height: 93.5%;
+}
+
+
+.cardsContainer {
+    grid-template: repeat(3, 1fr)/repeat(3, 1fr);
+    grid-column: 1 / 3;
+    grid-row: 1/ 4;
+    padding: 8px;
+}
+
+.insertionMenu {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+}
